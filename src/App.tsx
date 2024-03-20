@@ -1,8 +1,8 @@
 import { useState } from "react";
-import { ToastContainer, toast } from 'react-toastify';
+import { ToastContainer, toast } from "react-toastify";
 import { CerToPemConverterService } from "./domain";
 import { UploadFile } from "./components";
-import 'react-toastify/dist/ReactToastify.css';
+import "react-toastify/dist/ReactToastify.css";
 
 function App() {
   const [file, setFile] = useState<File | null>(null);
@@ -29,9 +29,25 @@ function App() {
   return (
     <div className="w-full h-screen bg-gray-200">
       <ToastContainer />
-      <div className="h-full max-w-screen-md mx-auto">
-        <div className="flex flex-col items-center justify-center h-full gap-8">
-          <h1 className="text-center text-7xl">CER to PEM converter</h1>
+      <div className="flex flex-col justify-between h-full max-w-sm px-4 pt-4 mx-auto md:pt-16 md:max-w-screen-md">
+        <div className="flex flex-col items-center justify-center gap-8">
+          <div>
+            <h1 className="font-bold text-center text-7xl text-slate-800">
+              CER to PEM converter
+            </h1>
+            <p className="text-sm text-center text-slate-500">
+              This converter is client-side, it does not share your data with
+              third parties. You can see the source code at{" "}
+              <a
+                href="https://github.com/meiyerDev/cer-to-pem-converter"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-indigo-600 hover:underline"
+              >
+                here.
+              </a>
+            </p>
+          </div>
           <div className="flex flex-col items-center justify-center w-full gap-6">
             <UploadFile file={file} onChange={setFile} />
             <button
@@ -43,6 +59,20 @@ function App() {
             </button>
           </div>
         </div>
+
+        <footer className="p-4 text-sm text-center text-slate-500">
+          <p>
+            Made with ❤️ by{" "}
+            <a
+              href="https://github.com/meiyerDev"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-indigo-600 hover:underline"
+            >
+              meiyerDev
+            </a>
+          </p>
+        </footer>
       </div>
     </div>
   );

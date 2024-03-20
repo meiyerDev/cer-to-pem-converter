@@ -71,7 +71,7 @@ export const UploadFile = ({ file, onChange }: Props) => {
         <div className="flex flex-col text-2xl text-center border-opacity-50 select-none">
           <p>Drop your .cer file here</p>
           <div className="divider">OR</div>
-          <p>Press to search your files</p>
+          <p>Press to search your file</p>
         </div>
         {file && (
           <div className="flex flex-col text-lg">
