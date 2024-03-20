@@ -36,8 +36,9 @@ function App() {
               CER to PEM converter
             </h1>
             <p className="text-sm text-center text-slate-500">
-              This converter is client-side, it does not share your data with
-              third parties. You can see the source code at{" "}
+              This converter is client-side, This application does not store
+              your data or the file, nor does it share it with third parties.
+              You can see the source code at{" "}
               <a
                 href="https://github.com/meiyerDev/cer-to-pem-converter"
                 target="_blank"
